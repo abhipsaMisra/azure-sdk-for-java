@@ -1,10 +1,7 @@
 package com.azure.digitaltwins.core.util;
 
-import com.azure.core.annotation.Fluent;
-
 import java.util.List;
 
-@Fluent
 public final class ListModelOptions {
 
     /*
@@ -26,11 +23,9 @@ public final class ListModelOptions {
      * Set the maxItemCount property.
      *
      * @param maxItemCount the maxItemCount value to set.
-     * @return the ListModelOptions object itself.
      */
-    public ListModelOptions setMaxItemCount(Integer maxItemCount) {
+    public void setMaxItemCount(Integer maxItemCount) {
         this.maxItemCount = maxItemCount;
-        return this;
     }
 
     /*
@@ -50,11 +45,9 @@ public final class ListModelOptions {
      * Set the includeModelDefinition property.
      *
      * @param includeModelDefinition the includeModelDefinition value to set.
-     * @return the ListModelOptions object itself.
      */
-    public ListModelOptions setIncludeModelDefinition(Boolean includeModelDefinition) {
+    public void setIncludeModelDefinition(Boolean includeModelDefinition) {
         this.includeModelDefinition = includeModelDefinition;
-        return this;
     }
 
     /*
@@ -73,10 +66,8 @@ public final class ListModelOptions {
      * Set the dependenciesFor property.
      *
      * @param dependenciesFor the dependenciesFor value to set.
-     * @return the ListModelOptions object itself.
      */
-    public ListModelOptions setDependenciesFor(List<String> dependenciesFor) {
+    public void setDependenciesFor(List<String> dependenciesFor) {
         this.dependenciesFor = dependenciesFor;
-        return this;
     }
 }

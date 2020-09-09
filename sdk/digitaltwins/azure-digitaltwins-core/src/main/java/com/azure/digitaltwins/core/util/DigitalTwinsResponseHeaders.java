@@ -3,13 +3,11 @@
 
 package com.azure.digitaltwins.core.util;
 
-import com.azure.core.annotation.Fluent;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * A helper class to represent the HTTP response headers returned by the service.
  */
-@Fluent
 public final class DigitalTwinsResponseHeaders {
     /*
      * The ETag property.
@@ -30,10 +28,8 @@ public final class DigitalTwinsResponseHeaders {
      * Set the eTag property: The ETag property.
      *
      * @param eTag the eTag value to set.
-     * @return the DigitalTwinsResponseHeaders object itself.
      */
-    public DigitalTwinsResponseHeaders setETag(String eTag) {
+    public void setETag(String eTag) {
         this.eTag = eTag;
-        return this;
     }
 }

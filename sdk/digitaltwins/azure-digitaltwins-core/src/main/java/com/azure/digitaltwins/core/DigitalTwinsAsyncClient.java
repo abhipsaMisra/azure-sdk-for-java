@@ -944,11 +944,10 @@ public final class DigitalTwinsAsyncClient {
     }
 
     Mono<Response<Void>> decommissionModelWithResponse(String modelId, Context context) {
-        List<Object> updateOperation = new UpdateOperationUtility()
-            .appendReplaceOperation("/decommissioned", true)
-            .getUpdateOperations();
+        UpdateOperationUtility util = new UpdateOperationUtility();
+        util.appendReplaceOperation("/decommissioned", true);
 
-        return protocolLayer.getDigitalTwinModels().updateWithResponseAsync(modelId, updateOperation, context);
+        return protocolLayer.getDigitalTwinModels().updateWithResponseAsync(modelId, util.getUpdateOperations(), context);
     }
 
     //==================================================================================================================================================

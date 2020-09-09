@@ -14,11 +14,4 @@ import java.util.List;
 public final class DeleteRelationshipRequestOptions extends RequestOptions {
     // This class exists to be added to later if the deleteRelationship APIs get a new optional parameter in later service
     // API versions and so that we don't have to expose that new optional parameter for other APIs like deleteDigitalTwin
-
-    // Need to override this method so that the returned value is of type DeleteRelationshipRequestOptions instead of type RequestOptions
-    @Override
-    public DeleteRelationshipRequestOptions setIfMatch(String ifMatch) {
-        super.setIfMatch(ifMatch);
-        return this;
-    }
 }

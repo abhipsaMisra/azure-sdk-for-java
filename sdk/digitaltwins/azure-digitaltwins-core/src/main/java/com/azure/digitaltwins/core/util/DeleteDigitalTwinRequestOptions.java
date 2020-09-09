@@ -11,10 +11,4 @@ import com.azure.digitaltwins.core.DigitalTwinsClient;
 public final class DeleteDigitalTwinRequestOptions extends RequestOptions {
     // This class exists to be added to later if the deleteDigitalTwin APIs get a new optional parameter in later service
     // API versions and so that we don't have to expose that new optional parameter for other APIs using RequestOptions
-
-    @Override
-    public DeleteDigitalTwinRequestOptions setIfMatch(String ifMatch) {
-        super.setIfMatch(ifMatch);
-        return this;
-    }
 }

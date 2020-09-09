@@ -3,12 +3,9 @@
 
 package com.azure.digitaltwins.core.util;
 
-import com.azure.core.annotation.Fluent;
-
 /**
  * General request options that are applicable, but optional, for many APIs.
  */
-@Fluent
 public class RequestOptions {
 
     String ifMatch;
@@ -32,10 +29,8 @@ public class RequestOptions {
      * This means that update and delete will be unconditional and the operation will execute regardless of the existence of the resource. </p>
      *
      * @param ifMatch A string representing a weak ETag for the entity that this request performs an operation against, as per RFC7232.
-     * @return The RequestOptions object itself.
      */
-    public RequestOptions setIfMatch(String ifMatch) {
+    public void setIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
-        return this;
     }
 }

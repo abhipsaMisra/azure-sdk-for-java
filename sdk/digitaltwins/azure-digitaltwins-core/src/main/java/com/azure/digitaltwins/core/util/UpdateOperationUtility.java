@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 /**
  * A utility to create the application/json-patch+json operations payload required for update operations.
  */
-@Fluent
 public final class UpdateOperationUtility {
     private static final String ADD = "add";
     private static final String REPLACE = "replace";
@@ -35,46 +34,37 @@ public final class UpdateOperationUtility {
      * Include an add operation.
      * @param path The path to the property to be added.
      * @param value The value to update to.
-     * @return The UpdateOperationUtility object itself.
      */
-    public UpdateOperationUtility appendAddOperation(String path, Object value) {
+    public void appendAddOperation(String path, Object value) {
         operations.add(
             new UpdateOperation()
                 .setOperation(ADD)
                 .setPath(path)
                 .setValue(value));
-
-        return this;
     }
 
     /**
      * Include a replace operation.
      * @param path The path to the property to be updated.
      * @param value The value to update to.
-     * @return The UpdateOperationUtility object itself.
      */
-    public UpdateOperationUtility appendReplaceOperation(String path, Object value) {
+    public void appendReplaceOperation(String path, Object value) {
         operations.add(
             new UpdateOperation()
                 .setOperation(REPLACE)
                 .setPath(path)
                 .setValue(value));
-
-        return this;
     }
 
     /**
      * Include a remove operation.
      * @param path The path to the property to be added.
-     * @return The UpdateOperationUtility object itself.
      */
-    public UpdateOperationUtility appendRemoveOperation(String path) {
+    public void appendRemoveOperation(String path) {
         operations.add(
             new UpdateOperation()
                 .setOperation(REMOVE)
                 .setPath(path));
-
-        return this;
     }
 
     @Fluent
